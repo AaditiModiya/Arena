@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0D10" />
+  <title>Git Club Arena — Build. Compete. Level Up.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+<style>
+:root{--bg:#0B0D10;--panel:#15181D;--panel2:#171a21;--border:#242833;--green:#5B8CFF;--purple:#A78BFA;--text:#F3F4F6;--muted:#A3AAB6;--warning:#F2B84B;--danger:#E66A6A;--radius:18px;--shadow:0 18px 50px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}.app-shell{display:flex;min-height:100vh}.sidebar{width:245px;position:fixed;inset:0 auto 0 0;background:#0c0e13;border-right:1px solid var(--border);padding:24px 16px;display:flex;flex-direction:column;z-index:20}.brand{display:flex;gap:11px;align-items:center;padding:2px 10px 30px}.brand-mark{width:35px;height:35px;border-radius:11px;background:var(--green);color:#07100c;display:grid;place-items:center;font-weight:800;font-size:20px}.brand strong{display:block;font-family:"Space Grotesk";letter-spacing:.4px}.brand span{font-size:10px;color:var(--green);font-weight:700;letter-spacing:2px}.nav{display:grid;gap:7px}.nav-item{border:0;background:transparent;color:var(--muted);padding:12px 13px;border-radius:12px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:600;transition:.2s}.nav-item span{width:19px;text-align:center}.nav-item:hover{background:#151820;color:var(--text)}.nav-item.active{background:rgba(0,229,160,.1);color:var(--green)}.sidebar-bottom{margin-top:auto}.mini-card{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:14px;margin-bottom:13px}.eyebrow{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:700;margin-bottom:7px}.mini-card strong{font-size:13px}.mini-card small{color:var(--muted);display:block;margin-top:8px}.progress-track{height:7px;background:#252a33;border-radius:99px;overflow:hidden;margin-top:11px}.progress-fill{height:100%;background:var(--green);border-radius:inherit}.profile-mini{display:flex;gap:10px;align-items:center;padding:8px}.profile-mini strong{font-size:13px;display:block}.profile-mini small{font-size:11px;color:var(--muted)}.avatar{width:35px;height:35px;border-radius:50%;background:linear-gradient(135deg,#A78BFA,#5B8CFF);color:#0B0D10;display:grid;place-items:center;font-weight:800}.main{margin-left:245px;width:calc(100% - 245px);min-width:0}.topbar{height:68px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 34px;position:sticky;top:0;background:rgba(8,9,13,.88);backdrop-filter:blur(16px);z-index:10}.breadcrumb{font-size:14px;color:var(--muted)}.top-actions{display:flex;align-items:center;gap:14px}.icon-btn{position:relative;background:transparent;border:0;color:var(--muted);font-size:18px}.icon-btn i{position:absolute;width:6px;height:6px;background:var(--green);border-radius:50%;right:-1px;top:1px}.mobile-menu{display:none;background:transparent;border:0;color:var(--text);font-size:21px}.page{max-width:1240px;margin:0 auto;padding:38px 34px 70px}.hero{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.hero h1{font:700 clamp(30px,4vw,48px)/1.05 "Space Grotesk";margin:8px 0 12px;letter-spacing:-1.8px}.hero p{color:var(--muted);max-width:650px;margin:0;line-height:1.7}.kicker{color:var(--green);font-size:11px;font-weight:800;letter-spacing:2px}.primary-btn,.ghost-btn,.filter-btn{border:0;border-radius:11px;padding:11px 15px;font-weight:700;transition:.2s}.primary-btn{background:var(--green);color:#06110c}.primary-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.ghost-btn{background:#171a21;border:1px solid var(--border);color:var(--text)}.ghost-btn:hover{border-color:#3a404d;background:#1c2028}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px}.stat{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:19px}.stat .value{font:700 28px "Space Grotesk"}.stat .label{font-size:10px;letter-spacing:1.3px;color:var(--muted);margin-top:5px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:32px 0 14px}.section-head h2{font:600 21px "Space Grotesk";margin:0}.link-btn{background:none;border:0;color:var(--green);font-weight:700}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.challenge-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:19px;display:flex;flex-direction:column;min-height:250px;transition:.2s}.challenge-card:hover{transform:translateY(-3px);border-color:#3a414e;box-shadow:var(--shadow)}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.tag{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--green);background:rgba(0,229,160,.09);border:1px solid rgba(0,229,160,.17);padding:6px 8px;border-radius:8px}.difficulty{font-size:10px;font-weight:800;color:var(--warning)}.challenge-card h3{font:600 20px "Space Grotesk";margin:22px 0 8px}.challenge-card p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}.card-meta{margin-top:auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}.xp{font-weight:800}.deadline{font-size:12px;color:var(--muted)}.two-col{display:grid;grid-template-columns:1.5fr 1fr;gap:15px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px}.panel h3{font:600 17px "Space Grotesk";margin:0 0 16px}.activity{display:grid;gap:15px}.activity-item{display:flex;gap:12px}.activity-icon{width:31px;height:31px;border-radius:10px;background:#181c23;display:grid;place-items:center}.activity-item strong{font-size:13px;display:block}.activity-item small{color:var(--muted)}.search-row{display:flex;gap:10px;margin:18px 0 15px}.search{flex:1;background:var(--panel);border:1px solid var(--border);border-radius:11px;color:var(--text);padding:12px 14px;outline:none}.search:focus{border-color:#3d4654}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:26px}.filter-btn{background:#13161c;color:var(--muted);border:1px solid var(--border);font-size:12px}.filter-btn.active{background:rgba(0,229,160,.1);border-color:rgba(0,229,160,.3);color:var(--green)}.status-title{display:flex;align-items:center;gap:9px;margin:31px 0 13px}.status-title h2{margin:0;font:600 18px "Space Grotesk"}.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green)}.status-dot.upcoming{background:var(--warning)}.status-dot.completed{background:var(--muted)}.empty{border:1px dashed #303642;color:var(--muted);padding:30px;border-radius:15px;text-align:center}.detail-head{display:flex;gap:20px;justify-content:space-between;align-items:flex-start;margin-bottom:22px}.detail-head h1{font:700 clamp(30px,4vw,44px) "Space Grotesk";margin:10px 0}.detail-meta{display:flex;gap:8px;flex-wrap:wrap}.meta-pill{background:#15181f;border:1px solid var(--border);padding:8px 10px;border-radius:9px;font-size:12px;color:var(--muted)}.detail-grid{display:grid;grid-template-columns:1.55fr .75fr;gap:16px}.content-panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:25px}.content-panel h2{font:600 19px "Space Grotesk";margin:0 0 12px}.content-panel h2:not(:first-child){margin-top:28px}.content-panel p,.content-panel li{color:#b2b8c2;line-height:1.75;font-size:14px}.content-panel ul{padding-left:20px}.sticky-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;position:sticky;top:88px;height:max-content}.sticky-card .big-status{font:700 23px "Space Grotesk";margin:8px 0 18px}.sticky-card .full{width:100%;margin-top:18px}.leader-top{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}.rank-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:25px;text-align:center}.rank-card:first-child{border-color:rgba(0,229,160,.35);transform:translateY(-7px)}.rank-number{font-size:28px}.rank-card strong{display:block;margin-top:10px}.rank-card small{color:var(--muted)}.leader-table{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}.leader-row{display:grid;grid-template-columns:70px 1fr 120px;gap:10px;padding:15px 20px;border-bottom:1px solid var(--border);align-items:center}.leader-row:last-child{border-bottom:0}.leader-row.header{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1.2px}.leader-row.me{background:rgba(0,229,160,.06);color:var(--green)}.progress-hero{display:grid;grid-template-columns:1fr .8fr;gap:15px}.level-card{background:linear-gradient(135deg,#15181D,#17132a);border:1px solid #30294b;border-radius:var(--radius);padding:26px}.level{font:700 36px "Space Grotesk"}.big-xp{font:700 24px "Space Grotesk"}.bar{height:11px;background:#292d36;border-radius:99px;overflow:hidden;margin:18px 0 8px}.bar>div{height:100%;background:linear-gradient(90deg,var(--purple),var(--green));border-radius:inherit}.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.badge{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:17px;text-align:center}.badge .emoji{font-size:25px}.badge strong{font-size:12px;display:block;margin-top:9px}.badge small{color:var(--muted);font-size:10px}.toast{position:fixed;right:25px;bottom:25px;background:#171b22;border:1px solid #303744;box-shadow:var(--shadow);border-radius:12px;padding:13px 16px;z-index:100;color:var(--text);opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:none}.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);display:grid;place-items:center;z-index:90;padding:20px}.modal-backdrop[hidden]{display:none}.modal{width:min(560px,100%);background:#101319;border:1px solid #303642;border-radius:20px;padding:24px;box-shadow:var(--shadow)}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal-head h2{font:600 21px "Space Grotesk";margin:0}.close{background:none;border:0;color:var(--muted);font-size:22px}.form-group{margin-top:15px}.form-group label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.form-control{width:100%;background:#0b0d11;border:1px solid var(--border);border-radius:10px;color:var(--text);padding:11px;outline:none}.form-control:focus{border-color:#46505f}.form-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}.success{text-align:center;padding:12px 5px}.success .check{width:62px;height:62px;border-radius:50%;background:rgba(0,229,160,.12);color:var(--green);display:grid;place-items:center;font-size:29px;margin:0 auto 14px}.success h2{font:600 23px "Space Grotesk"}.success p{color:var(--muted);line-height:1.6}.mobile-menu{margin-right:12px}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.detail-grid,.progress-hero,.two-col{grid-template-columns:1fr}.sticky-card{position:static}.badges{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:.25s;width:260px}.sidebar.open{transform:none;box-shadow:20px 0 60px rgba(0,0,0,.5)}.main{margin-left:0;width:100%}.mobile-menu{display:block}.topbar{padding:0 18px}.page{padding:27px 17px 50px}.hero{display:block}.hero .primary-btn{margin-top:18px}.cards{grid-template-columns:1fr}.stats{gap:9px}.stat{padding:15px}.stat .value{font-size:23px}.detail-head{display:block}.leader-top{grid-template-columns:1fr}.rank-card:first-child{transform:none}.leader-row{grid-template-columns:45px 1fr 90px;padding:13px 12px}.search-row{display:block}.search-row .primary-btn{width:100%;margin-top:9px}.section-head{margin-top:25px}.hero h1{letter-spacing:-1px}}
+
+</style>
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">◈</div>
+        <div><strong>GIT CLUB</strong><span>ARENA</span></div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-page="challenges"><span>⚡</span> Challenges</button>
+        <button class="nav-item" data-page="leaderboard"><span>🏆</span> Leaderboard</button>
+        <button class="nav-item" data-page="progress"><span>◔</span> My Progress</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-card">
+          <span class="eyebrow">WEEKLY GOAL</span>
+          <strong>4 / 5 challenges</strong>
+          <div class="progress-track"><div class="progress-fill" style="width:80%"></div></div>
+          <small>🔥 7 day streak</small>
+        </div>
+        <div class="profile-mini"><div class="avatar">A</div><div><strong>Aaditi</strong><small>Level 7 · 2,450 XP</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb" id="breadcrumb">Dashboard</div>
+        <div class="top-actions"><button class="icon-btn" title="Notifications">🔔<i></i></button><div class="avatar">A</div></div>
+      </header>
+      <div id="content"></div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal"></div>
+  </div>
+
+  
+<script>
+const challenges=[
+{id:1,title:'Campus Event Portal',category:'Web Development',difficulty:'Medium',xp:500,deadline:'2 days left',status:'active',desc:'Build a responsive event discovery platform for university students.',problem:'Students often discover university events through scattered announcements, WhatsApp groups and social media. Build a centralized event discovery experience.',requirements:['Responsive interface','Event cards and details','Search functionality','Category filtering','Registration interaction'],rules:['Build your own solution','Use permitted technologies','Submit before the deadline','Solution must be functional']},
+{id:2,title:'GitHub Profile Analyzer',category:'Web Development',difficulty:'Easy',xp:300,deadline:'4 days left',status:'active',desc:"Create a dashboard that analyzes a GitHub user's public profile and presents useful statistics.",problem:'Developers often need a quick way to understand their GitHub activity. Create a clean analytics experience using public profile information.',requirements:['Profile search','Repository statistics','Language breakdown','Responsive dashboard'],rules:['Use public information only','Keep the interface accessible','Submit before deadline'],},
+{id:3,title:'AI Study Assistant',category:'AI/ML',difficulty:'Hard',xp:1000,deadline:'6 days left',status:'active',desc:'Design an AI-powered study assistant that helps students organize and understand their study material.',problem:'Students have notes spread across documents and messages. Design an assistant that makes revision more structured.',requirements:['Study workspace','Question interface','Topic organization','Clear response states'],rules:['Explain your approach','Protect user data','Submit before deadline'],},
+{id:4,title:'CHARUSAT Expense Tracker',category:'App Development',difficulty:'Medium',xp:600,deadline:'Starts tomorrow',status:'upcoming',desc:'Build a simple expense-tracking experience designed for university students.',problem:'Students want a quick way to understand where their monthly money goes.',requirements:['Add expense flow','Categories','Monthly summary','Responsive UI'],rules:['Keep the flow simple','Use realistic sample data'],},
+{id:5,title:'UI Redesign Challenge',category:'Design',difficulty:'Easy',xp:350,deadline:'Starts in 3 days',status:'upcoming',desc:'Redesign a common student-facing interface with a focus on usability and accessibility.',problem:'Take an everyday student interface and improve its hierarchy, clarity and accessibility.',requirements:['Before/after concept','Responsive design','Accessibility considerations'],rules:['Explain your design decisions','Submit before deadline'],},
+{id:6,title:'Smart Attendance Dashboard',category:'Web Development',difficulty:'Medium',xp:650,deadline:'Completed 2 days ago',status:'completed',desc:'Build a dashboard that helps students understand attendance trends across subjects.',problem:'Students need a clearer way to identify attendance trends and subjects that need attention.',requirements:['Subject cards','Attendance percentages','Trend visualization','Responsive UI'],rules:['Use realistic sample data'],},
+{id:7,title:'Campus FAQ Bot',category:'AI/ML',difficulty:'Hard',xp:900,deadline:'Completed 5 days ago',status:'completed',desc:'Create a conversational interface that helps students find answers to common campus questions.',problem:'Campus information can be difficult to find quickly. Design a focused conversational experience.',requirements:['Chat interface','Suggested questions','Answer states'],rules:['Use mock responses if needed'],}
+];
+const leaders=[['Aarav Patel',4850],['Riya Shah',4620],['Dev Mehta',4410],['Krisha Patel',3980],['Om Shah',3850],['Dhruv Shah',3720],['Meera Joshi',3510],['Yash Desai',3320],['Anaya Shah',3100],['Aditi',2450]];
+let state={page:'dashboard',search:'',category:'All',difficulty:'All',userStatus:{}};
+const content=document.getElementById('content');
+const breadcrumb=document.getElementById('breadcrumb');
+const toast=document.getElementById('toast');
+function esc(s){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+function nav(){document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.page===state.page));breadcrumb.textContent=state.page==='challenge-detail'?'Challenge Details':state.page==='progress'?'My Progress':state.page[0].toUpperCase()+state.page.slice(1);}
+function card(c){const user=state.userStatus[c.id];const action=user==='submitted'?'Submitted ✓':user==='in-progress'?'Continue Challenge →':'View Challenge →';return `<article class="challenge-card"><div class="card-top"><span class="tag">${esc(c.category)}</span><span class="difficulty">${esc(c.difficulty)}</span></div><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p><div class="card-meta"><div><div class="xp">+${c.xp} XP</div><div class="deadline">${esc(c.deadline)}</div></div><button class="ghost-btn" onclick="openChallenge(${c.id})">${action}</button></div></article>`;}
+function dashboard(){const active=challenges.filter(c=>c.status==='active').slice(0,3);return `<div class="page"><section class="hero"><div><span class="kicker">GIT CLUB • CHALLENGE ARENA</span><h1>Ready for your next challenge?</h1><p>Sharpen your skills, build real things and compete with the Git Club community.</p></div><button class="primary-btn" onclick="go('challenges')">Explore Challenges →</button></section><section class="stats"><div class="stat"><div class="value">12</div><div class="label">COMPLETED</div></div><div class="stat"><div class="value">2</div><div class="label">IN PROGRESS</div></div><div class="stat"><div class="value">2,450</div><div class="label">TOTAL XP</div></div><div class="stat"><div class="value">#18</div><div class="label">RANK</div></div></section><div class="section-head"><h2>🔥 Active Challenges</h2><button class="link-btn" onclick="go('challenges')">View all →</button></div><div class="cards">${active.map(card).join('')}</div><div class="two-col"><section class="panel"><div class="section-head" style="margin:0 0 16px"><h2>Weekly Progress</h2><span class="kicker">80%</span></div><div class="progress-track" style="height:10px"><div class="progress-fill" style="width:80%"></div></div><p style="color:var(--muted);font-size:13px">4 / 5 challenges completed</p><div style="margin-top:18px;color:var(--green);font-weight:700">🔥 7 day streak</div></section><section class="panel"><h3>Recent Activity</h3><div class="activity"><div class="activity-item"><div class="activity-icon">✓</div><div><strong>Completed Git Basics</strong><small>+300 XP · Today</small></div></div><div class="activity-item"><div class="activity-icon">↗</div><div><strong>Rank increased</strong><small>Moved up 6 positions</small></div></div><div class="activity-item"><div class="activity-icon">⚡</div><div><strong>New challenge available</strong><small>AI Study Assistant</small></div></div></div></section></div></div>`;}
+function challengesPage(){let list=challenges.filter(c=>(state.category==='All'||c.category===state.category)&&(state.difficulty==='All'||c.difficulty===state.difficulty)&&(`${c.title} ${c.category} ${c.desc}`.toLowerCase().includes(state.search.toLowerCase())));const section=(title,status,cls)=>{const arr=list.filter(c=>c.status===status);return `<div class="status-title"><span class="status-dot ${cls||''}"></span><h2>${title}</h2><span style="color:var(--muted);font-size:12px">${arr.length}</span></div>${arr.length?`<div class="cards">${arr.map(card).join('')}</div>`:`<div class="empty">No challenges found in this section.</div>`}`};return `<div class="page"><section class="hero"><div><span class="kicker">EXPLORE</span><h1>Challenges</h1><p>Find your next challenge and put your skills to work.</p></div></section><div class="search-row"><input class="search" value="${esc(state.search)}" oninput="setSearch(this.value)" placeholder="🔍 Search challenges..."/><button class="ghost-btn" onclick="clearFilters()">Clear filters</button></div><div class="filters"><button class="filter-btn ${state.category==='All'?'active':''}" onclick="setCategory('All')">All</button>${['Web Development','AI/ML','App Development','Design','IoT'].map(x=>`<button class="filter-btn ${state.category===x?'active':''}" onclick="setCategory('${x}')">${x}</button>`).join('')}</div><div class="filters"><span style="font-size:12px;color:var(--muted);padding:9px 2px">Difficulty:</span>${['All','Easy','Medium','Hard'].map(x=>`<button class="filter-btn ${state.difficulty===x?'active':''}" onclick="setDifficulty('${x}')">${x}</button>`).join('')}</div>${section('Active','active')}${section('Upcoming','upcoming','upcoming')}${section('Completed','completed','completed')}</div>`;}
+function detail(c){const status=state.userStatus[c.id]||'not-started';const statusLabel={"not-started":"NOT STARTED","in-progress":"IN PROGRESS",submitted:'SUBMITTED'}[status];const button=status==='not-started'?'🚀 Start Challenge':status==='in-progress'?'📤 Submit Challenge':'✓ Submitted';return `<div class="page"><button class="link-btn" onclick="go('challenges')">← Back to Challenges</button><div class="detail-head" style="margin-top:20px"><div><span class="kicker">${esc(c.category)}</span><h1>${esc(c.title)}</h1><div class="detail-meta"><span class="meta-pill">${esc(c.difficulty)}</span><span class="meta-pill">+${c.xp} XP</span><span class="meta-pill">⏱ ${esc(c.deadline)}</span></div></div></div><div class="detail-grid"><article class="content-panel"><h2>About the Challenge</h2><p>${esc(c.problem)}</p><h2>Requirements</h2><ul>${(c.requirements||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h2>Rules</h2><ul>${(c.rules||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article><aside class="sticky-card"><span class="eyebrow">CHALLENGE STATUS</span><div class="big-status">● ${statusLabel}</div><div class="meta-pill" style="display:block">Deadline<br><strong style="color:var(--text)">${esc(c.deadline)}</strong></div><div class="meta-pill" style="display:block;margin-top:8px">Reward<br><strong style="color:var(--green)">+${c.xp} XP</strong></div><button class="primary-btn full" ${status==='submitted'?'disabled':''} onclick="${status==='not-started'?`startChallenge(${c.id})`:status==='in-progress'?`openSubmit(${c.id})`:'showToast(\'Submission already received ✓\')'}">${button}</button></aside></div></div>`;}
+function leaderboard(){return `<div class="page"><section class="hero"><div><span class="kicker">COMMUNITY</span><h1>Leaderboard</h1><p>See how you rank against the Git Club community.</p></div><button class="ghost-btn">This Week ▾</button></section><div class="leader-top"><div class="rank-card"><div class="rank-number">🥇</div><strong>Aarav Patel</strong><small>4,850 XP</small></div><div class="rank-card"><div class="rank-number">🥈</div><strong>Riya Shah</strong><small>4,620 XP</small></div><div class="rank-card"><div class="rank-number">🥉</div><strong>Dev Mehta</strong><small>4,410 XP</small></div></div><div class="leader-table"><div class="leader-row header"><span>Rank</span><span>Participant</span><span>XP</span></div>${leaders.map((l,i)=>`<div class="leader-row ${l[0]==='Aditi'?'me':''}"><strong>#${i+1}</strong><span>${l[0]}${l[0]==='Aditi'?' · YOU':''}</span><strong>${l[1].toLocaleString()} XP</strong></div>`).join('')}</div></div>`;}
+function progress(){return `<div class="page"><section class="hero"><div><span class="kicker">YOUR JOURNEY</span><h1>My Progress</h1><p>Keep building. Keep learning. Keep moving up.</p></div></section><div class="progress-hero"><section class="level-card"><span class="eyebrow">CURRENT LEVEL</span><div class="level">Level 7</div><div class="big-xp">2,450 / 3,000 XP</div><div class="bar"><div style="width:82%"></div></div><small style="color:var(--muted)">550 XP until Level 8</small></section><section class="panel"><h3>Challenge Summary</h3><div class="stats" style="grid-template-columns:repeat(3,1fr);margin:0"><div class="stat"><div class="value">12</div><div class="label">DONE</div></div><div class="stat"><div class="value">2</div><div class="label">ACTIVE</div></div><div class="stat"><div class="value">3</div><div class="label">UP NEXT</div></div></div></section></div><div class="section-head"><h2>Badges</h2></div><div class="badges"><div class="badge"><div class="emoji">🏅</div><strong>First Submission</strong><small>Unlocked</small></div><div class="badge"><div class="emoji">🔥</div><strong>7 Day Streak</strong><small>Unlocked</small></div><div class="badge"><div class="emoji">💻</div><strong>Web Warrior</strong><small>Unlocked</small></div><div class="badge"><div class="emoji">🏆</div><strong>Top 20</strong><small>Unlocked</small></div></div><div class="section-head"><h2>Challenge History</h2></div><div class="panel"><div class="activity"><div class="activity-item"><div class="activity-icon">✓</div><div><strong>Git Basics</strong><small>Completed · +300 XP</small></div></div><div class="activity-item"><div class="activity-icon">✓</div><div><strong>Portfolio Builder</strong><small>Completed · +500 XP</small></div></div><div class="activity-item"><div class="activity-icon">◐</div><div><strong>Campus Event Portal</strong><small>In progress · +500 XP available</small></div></div></div></div></div>`;}
+function render(){nav();if(state.page==='dashboard')content.innerHTML=dashboard();else if(state.page==='challenges')content.innerHTML=challengesPage();else if(state.page==='leaderboard')content.innerHTML=leaderboard();else if(state.page==='progress')content.innerHTML=progress();else if(state.page==='challenge-detail')content.innerHTML=detail(challenges.find(c=>c.id===state.selected));}
+function go(page){state.page=page;render();window.scrollTo(0,0);document.getElementById('sidebar').classList.remove('open');}
+function openChallenge(id){state.selected=id;state.page='challenge-detail';render();window.scrollTo(0,0)}
+function setSearch(v){state.search=v;render()}
+function setCategory(v){state.category=v;render()}
+function setDifficulty(v){state.difficulty=v;render()}
+function clearFilters(){state.search='';state.category='All';state.difficulty='All';render()}
+function startChallenge(id){state.userStatus[id]='in-progress';showToast('Challenge started 🚀');render()}
+function openSubmit(id){const c=challenges.find(x=>x.id===id);document.getElementById('modal').innerHTML=`<div class="modal-head"><h2>Submit Challenge</h2><button class="close" onclick="closeModal()">×</button></div><div class="form-group"><label>GitHub Repository</label><input class="form-control" id="repo" placeholder="https://github.com/username/project"></div><div class="form-group"><label>Live Demo</label><input class="form-control" id="demo" placeholder="https://your-project.vercel.app"></div><div class="form-group"><label>Tell us about your solution</label><textarea class="form-control" id="desc" rows="4" placeholder="Describe your approach..."></textarea></div><div class="form-actions"><button class="ghost-btn" onclick="closeModal()">Cancel</button><button class="primary-btn" onclick="submitChallenge(${id})">Submit →</button></div>`;document.getElementById('modalBackdrop').hidden=false}
+function submitChallenge(id){state.userStatus[id]='submitted';closeModal();showToast('Challenge submitted successfully ✓');render()}
+function closeModal(){document.getElementById('modalBackdrop').hidden=true}
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
+document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+document.getElementById('mobileMenu').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
+document.getElementById('modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop')closeModal()});
+render();
+
+</script>
+
+<style>
+/* Professional accessibility + interaction polish */
+:root{
+  --accent:#5B8CFF;
+  --accent-strong:#7AA4FF;
+  --accent-soft:rgba(91,140,255,.13);
+  --border:rgba(255,255,255,.09);
+  --shadow:0 14px 38px rgba(0,0,0,.24);
+}
+html{scroll-behavior:smooth}
+body{
+  background:#0B0D10;
+  color:#F3F4F6;
+  letter-spacing:.005em;
+}
+body::selection{background:rgba(91,140,255,.32);color:#fff}
+button,a,input,textarea,select{font:inherit}
+button,a{transition:transform .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid rgba(91,140,255,.55);
+  outline-offset:3px;
+}
+.card,.panel,.stat-card,.challenge-card{
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.card:hover,.challenge-card:hover{
+  border-color:rgba(91,140,255,.38);
+  transform:translateY(-3px);
+}
+button.primary,.primary-btn,.cta{
+  background:#5B8CFF !important;
+  color:#fff !important;
+  box-shadow:0 8px 24px rgba(91,140,255,.20);
+}
+button.primary:hover,.primary-btn:hover,.cta:hover{
+  background:#7AA4FF !important;
+  transform:translateY(-1px);
+  box-shadow:0 11px 28px rgba(91,140,255,.28);
+}
+button.secondary,.secondary-btn{
+  background:#171B22 !important;
+  border:1px solid rgba(255,255,255,.11) !important;
+}
+.badge,.chip,.tag{
+  border:1px solid rgba(255,255,255,.08);
+}
+input,textarea,select{
+  background:#101318 !important;
+  color:#F3F4F6 !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+}
+input::placeholder,textarea::placeholder{color:#737B88}
+.progress-bar,.progress-fill{background:#5B8CFF !important}
+a{color:#AFC6FF}
+.muted,.secondary-text{color:#A3AAB6}
+.status-active{color:#7AA4FF}
+.status-upcoming{color:#F2B84B}
+.status-completed{color:#98A1AE}
+.nav-link:hover{color:#fff;background:rgba(91,140,255,.08)}
+.modal-backdrop{backdrop-filter:blur(7px);background:rgba(0,0,0,.62)}
+.toast{border:1px solid rgba(91,140,255,.28);box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto !important;animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+</style>
+<script>
+/* Accessible live announcements for key interactions */
+(function(){
+  const live=document.createElement('div');
+  live.setAttribute('aria-live','polite');
+  live.setAttribute('aria-atomic','true');
+  live.style.cssText='position:fixed;left:-9999px;width:1px;height:1px;overflow:hidden;';
+  live.id='aria-live-region';
+  document.body.appendChild(live);
+  window.announce=function(message){ live.textContent=''; setTimeout(()=>live.textContent=message,30); };
+  document.addEventListener('click',e=>{
+    const el=e.target.closest('button,[role="button"],a');
+    if(el && el.textContent.trim()) announce(el.textContent.trim());
+  });
+})();
+</script>
+
+</body>
+</html>
